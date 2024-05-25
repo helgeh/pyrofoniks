@@ -15,8 +15,8 @@ import { useTheme } from 'vuetify';
 
 // Components
 import logo from '@/assets/logo.svg';
-import AppBarMenuComponent from '@/components/AppBarMenuComponent.vue';
-import DrawerComponent from '@/components/DrawerComponent.vue';
+// import AppBarMenuComponent from '@/components/AppBarMenuComponent.vue';
+// import DrawerComponent from '@/components/DrawerComponent.vue';
 
 /** Vuetify Theme */
 const theme = useTheme();
@@ -28,7 +28,7 @@ const globalStore = useGlobal();
 const configStore = useConfig();
 
 /** Title */
-const title = import.meta.env.VITE_APP_TITLE ?? 'Vuetify3 Application';
+const title = import.meta.env.VITE_APP_TITLE ?? 'Pyrofoniks Partyband';
 
 /** drawer visibility */
 const drawer: Ref<boolean> = ref(false);
@@ -100,11 +100,11 @@ onMounted(() => {
       </router-view>
     </v-main>
 
-    <v-overlay v-model="loading" app class="justify-center align-center">
+    <!-- <v-overlay v-model="loading" app class="justify-center align-center">
       <v-progress-circular indeterminate size="64" />
-    </v-overlay>
+    </v-overlay> -->
 
-    <v-snackbar
+    <!-- <v-snackbar
       v-model="snackbarVisibility"
       @update:model-value="onSnackbarChanged"
     >
@@ -112,7 +112,7 @@ onMounted(() => {
       <template #actions>
         <v-btn icon="mdi-close" @click="onSnackbarChanged" />
       </template>
-    </v-snackbar>
+    </v-snackbar> -->
 
     <!-- <v-footer app elevation="3">
       <span class="mr-5">2024 &copy;</span>
@@ -127,21 +127,21 @@ onMounted(() => {
   </teleport>
 </template>
 
-<style>
-/*@use 'vuetify/_settings';*/
+<style lang="scss">
+@use 'vuetify/_settings';
 
 html {
-  overflow-y: hidden;
+  overflow-y: auto;
   scrollbar-width: thin;
-  /*scrollbar-color: map-get(settings.$grey, 'lighten-2')
-    map-get(settings.$grey, 'base');*/
-  scrollbar-color: #E0E0E0 #9E9E9E;
+  scrollbar-color: map-get(settings.$grey, 'base')
+    map-get(settings.$grey, 'darken-2');
+/*  scrollbar-color: #E0E0E0 #9E9E9E;*/
   background: #161616;
 }
 
 html, body {
   height: 100%;
-  overflow: hidden !important;
+  overflow-y: auto !important;
 }
 
 ::-webkit-scrollbar {
@@ -151,17 +151,19 @@ html, body {
 
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.1);
-  background-color: #E0E0E0; /* map-get(settings.$grey, 'lighten-2'); */
+  background-color: map-get(settings.$grey, 'base');
+/*  background-color: #E0E0E0;*/
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 0.5rem;
-  background-color: #E0E0E0; /* map-get(settings.$grey, 'base'); */
+  background-color: map-get(settings.$grey, 'darken-2');
+/*  background-color: #E0E0E0;*/
   box-shadow: inset 0 0 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .v-application {
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 
 .v-app-bar .v-progress-linear {

@@ -31,7 +31,7 @@ defineProps({
 
 <style scoped>
 .logo-container svg {
-  fill: #a53a3a;
+  fill: rgb(255, 138, 101, 0.7);
   filter: drop-shadow(0px 12px 12px #000000);
 }
 .logo-container__DISABLED:hover {
