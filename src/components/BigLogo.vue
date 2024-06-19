@@ -36,7 +36,7 @@
   fill: rgb(237, 91, 88);
   filter: drop-shadow(0px 12px 12px #000000);
 }
-.logo-container:hover {
+.logo-container__DISABLED:hover {
   will-change: filter;
   filter: drop-shadow(0px 12px 12px #904000);
 }
