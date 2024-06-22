@@ -3,7 +3,11 @@
   <defs id="defs1">
     <linearGradient id="linearGradient156">
       <stop id="stop156" stop-color="#ff8f00" offset="0"/>
-      <stop id="stop157" stop-color="#ff7043" stop-opacity=".2" offset="1">
+      <stop id="stop157" stop-color="#ff7043" stop-opacity="0" offset="1">
+      	<animate id="ani1" attributeName="stop-opacity" dur="3s" from="0" to=".4" begin="0;ani2.end" />
+      	<animate id="ani2" attributeName="stop-opacity" dur="3s" from=".4" to="0" begin="ani1.end" />
+      	<!-- <animate id="ani3" attributeName="stop-color" dur="3800ms" values="#ff8f00;#ff7043" begin="0;ani4.end" />
+      	<animate id="ani4" attributeName="stop-color" dur="3800ms" values="#ff7043;#ff8f00" begin="ani3.end" /> -->
       </stop>
     </linearGradient>
     <clipPath id="clipPath2">

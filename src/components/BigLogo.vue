@@ -21,10 +21,7 @@
 <template>
   <v-container >
     <v-fade-transition>
-      <v-img
-        src="@/assets/logo.svg"
-        alt="Pyrofoniks"
-        class="logo-container mx-auto mt-4"
+      <BigLogoSvg 
         v-show="isLoaded"
       />
     </v-fade-transition>
