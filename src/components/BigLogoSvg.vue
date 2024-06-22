@@ -93,6 +93,6 @@
 	svg {
 		width: 100%;
 		height: 100%;
-  		filter: drop-shadow(0px 12px 12px #000000);
+  	filter: drop-shadow(0px 12px 12px #000000);
 	}
 </style>
