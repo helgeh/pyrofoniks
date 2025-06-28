@@ -12,6 +12,6 @@
 
 <style>
   html {
-    overflow: hidden;
+    /*overflow: hidden;*/
   }
 </style>

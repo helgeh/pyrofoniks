@@ -3,7 +3,7 @@
     <v-card
       prepend-icon="mdi-phone-classic"
       variant="plain"
-      class="mx-auto"
+      class="mx-auto mb-12"
       href="tel:+4792239908"
       rel="noopener"
       color="deep-orange-lighten-3"

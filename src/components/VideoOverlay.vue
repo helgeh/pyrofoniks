@@ -1,7 +1,7 @@
 <template>
 	
   <v-fade-transition>
-    <v-container class="d-flex justify-center videocontainer" v-show="isLoaded">
+    <v-container class="d-flex justify-center videocontainer mb-5" v-show="isLoaded">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/lE8pq3imEiM?si=0CICKHHQm55Wegd_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </v-container>
   </v-fade-transition>
