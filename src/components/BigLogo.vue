@@ -4,6 +4,7 @@
 
   const title = import.meta.env.VITE_APP_TITLE;
 
+  const containerClass = ref('fill-height')
   const isLoaded = ref(false)
   const props = defineProps({
     loaded: Boolean,
@@ -14,17 +15,20 @@
   })
   watch(
     () => props.loaded,
-    val => isLoaded.value = val
+    val => {
+      isLoaded.value = val
+      setTimeout(() => containerClass.value = 'fill-height tucked', 500)
+    }
   )
 </script>
 
 <template>
-  <v-container >
-    <v-fade-transition>
+  <v-container :class="containerClass" max-width="900px">
+    <v-slide-y-transition>
       <BigLogoSvg 
         v-show="isLoaded"
       />
-    </v-fade-transition>
+    </v-slide-y-transition>
   </v-container>
 </template>
 
@@ -36,5 +40,9 @@
 .logo-container__DISABLED:hover {
   will-change: filter;
   filter: drop-shadow(0px 12px 12px #904000);
+}
+.tucked {
+  height: 300px !important;
+  transition: height 0.5s ease-in-out;
 }
 </style>
