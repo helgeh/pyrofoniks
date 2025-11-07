@@ -1,14 +1,14 @@
 <template>
   <v-fade-transition>
     <v-card
-      prepend-icon="mdi-phone-classic"
+      prepend-icon="mdi-email-outline"
       variant="plain"
       class="mx-auto mb-12"
-      href="tel:+4792239908"
+      href="mailto: post@pyrofoniks.no"
       rel="noopener"
       color="deep-orange-lighten-3"
       max-width="225"
-      subtitle="(+47) 92 23 99 08"
+      subtitle="post@pyrofoniks.no"
       title="Kontakt oss"
       v-show="isLoaded"
     >
