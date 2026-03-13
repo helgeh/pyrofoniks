@@ -23,7 +23,7 @@
 </script>
 
 <template>
-  <v-container :class="containerClass" class="my-5" max-width="900px">
+  <v-container :class="containerClass" class="mt-5 mb-2" max-width="900px">
     <v-slide-y-transition>
       <BigLogoSvg 
         v-show="isLoaded"
