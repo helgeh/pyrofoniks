@@ -13,20 +13,27 @@
       default: 'Welcome to Vuetify.',
     },
   })
+  const logoElem = ref(null)
   watch(
     () => props.loaded,
     val => {
       isLoaded.value = val
-      setTimeout(() => containerClass.value = 'fill-height tucked', 500)
+      // setTimeout(() => {
+      //   containerClass.value = 'fill-height tucked'
+      //   setTimeout(() => {
+      //     console.log('hmm', logoElem.value.$el.querySelector('svg').clientHeight)
+      //   }, 500)
+      // }, 500)
     }
   )
 </script>
 
 <template>
-  <v-container :class="containerClass" class="mt-5 mb-2" max-width="900px">
+  <v-container class="mt-5 mb-2 fill-height tucked" max-width="900px">
     <v-slide-y-transition>
       <BigLogoSvg 
         v-show="isLoaded"
+        ref="logoElem"
       />
     </v-slide-y-transition>
   </v-container>
@@ -43,6 +50,7 @@
 }
 .tucked {
   height: 300px !important;
-  transition: height 0.5s ease-in-out;
+  /*transition: height 0.5s ease-in-out;*/
+  /*aspect-ratio: 16/9;*/
 }
 </style>

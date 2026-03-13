@@ -27,7 +27,7 @@
 <style scoped>
   .videocontainer {
     overflow: hidden;
-    aspect-ratio: 2.1/1;
+    aspect-ratio: 16/9;
     width: 100%;
     max-width: 1080px;
   }
