@@ -10,7 +10,7 @@
 </template>
 
 <script setup>
-  import { ref, watch } from 'vue'
+  import { ref, watch, onMounted, onUpdated } from 'vue'
   const isLoaded = ref(false)
   const props = defineProps({loaded: Boolean})
   window.toggleMe = function () {
@@ -22,6 +22,9 @@
       isLoaded.value = val
     }
   )
+  onMounted(() => {
+    isLoaded.value = props.loaded
+  })
 </script>
 
 <style scoped>

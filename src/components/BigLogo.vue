@@ -26,10 +26,14 @@
       // }, 500)
     }
   )
+  onMounted(() => {
+    if (props.loaded === true)
+      isLoaded.value = true
+  })
 </script>
 
 <template>
-  <v-container class="mt-5 mb-2 fill-height tucked" max-width="900px">
+  <v-container class="mt-5 mb-2 logo-container" max-width="900px">
     <v-slide-y-transition>
       <BigLogoSvg 
         v-show="isLoaded"
@@ -43,6 +47,7 @@
 .logo-container {
   fill: rgb(237, 91, 88);
   filter: drop-shadow(0px 12px 12px #000000);
+  max-width: 900px !important;
 }
 .logo-container__DISABLED:hover {
   will-change: filter;
