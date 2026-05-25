@@ -2,12 +2,7 @@
 
   <v-container class="mt-5 mb-2" max-width="900px">
     <v-fade-transition v-for="event in events">
-      <EventCard
-        :title="event.title"
-        :body="event.body"
-        :date="event.date"
-        :location="event.location"
-      />
+      <EventCard :event />
     </v-fade-transition>
   </v-container>
 

@@ -11,9 +11,10 @@ const events = ref([
     },
     {
       title: 'Jubileumsfest!',
-      body: 'Den 30. mai spiller Pyrofoniks på Arnadal Idrettslags jubileumsfest!',
+      body: 'Arrangementet er dessverre avlyst',
       date: '2026-05-30T18:00:00+01:00', // '30. mai',
       location: 'Arnadal',
+      cancelled: true,
     },
     {
       title: 'Konsert på Bache Bar!',
