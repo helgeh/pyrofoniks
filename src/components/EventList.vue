@@ -10,7 +10,7 @@
 
 <script setup>
   import { ref } from 'vue'
-  import EventCard from './EventCard.vue';
+  import EventCard from './EventCard.vue'
   import { useAppStore } from '../stores'
   const { events } = useAppStore()
 </script>

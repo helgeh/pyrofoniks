@@ -2,6 +2,8 @@
   import { ref, watch, onMounted } from 'vue'
   import { version } from 'vuetify'
 
+  import BigLogoSvg from './BigLogoSvg.vue'
+
   const title = import.meta.env.VITE_APP_TITLE;
 
   const containerClass = ref('fill-height')

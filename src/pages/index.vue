@@ -35,6 +35,11 @@
   import { ref, onMounted } from 'vue'
   import { useAppStore } from '../stores'
 
+  import BigLogo from '../components/BigLogo.vue'
+  import EventList from '../components/EventList.vue'
+  import VideoOverlay from '../components/VideoOverlay.vue'
+  import ContactCard from '../components/ContactCard.vue'
+
   const store = useAppStore()
 
   const logoLoaded = ref(false)

@@ -13,6 +13,7 @@
 
 <script setup>
   import { isPastDate } from '../utils.js'
+  import EventMeta from './EventMeta.vue'
   const { event } = defineProps(['event'])
 </script>
 
